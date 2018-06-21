@@ -12,11 +12,11 @@ var ws=require("ws");
 var port=process.env.PORT||80,addr="0.0.0.0";
 
 function request(req,resp){
-	var url = url.parse(req.url);
+	var _url=url.parse(req.url);
 	var options={
-		hostname:url.hostname,
-		port:url.port||80,
-		path:url.path,
+		hostname:_url.hostname,
+		port:_url.port||80,
+		path:_url.path,
 		method:req.method,
 		headers:req.headers
 	};
