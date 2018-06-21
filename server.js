@@ -9,7 +9,7 @@ var net=require("net");
 var url=require("url");
 var ws=require("ws");
 
-var port=80,addr="0.0.0.0";
+var port=process.env.PORT||80,addr="0.0.0.0";
 
 function request(req,resp){
 	var url = url.parse(req.url);
