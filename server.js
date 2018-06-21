@@ -24,7 +24,7 @@ function request(req,resp){
 		resp.writeHead(data.statusCode,data.headers);
 		data.pipe(resp);
 	}).on("error",function(e){
-		res.end();
+		resp.end();
 	});
 	req.pipe(c);
 }
